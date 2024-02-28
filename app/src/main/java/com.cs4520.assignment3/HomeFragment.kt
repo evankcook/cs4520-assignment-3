@@ -4,9 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.cs4520.assignment3.databinding.HomeFragmentBinding
@@ -26,12 +23,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mvpButton = binding.mvpButton
-        val mvvmButton = binding.mvpButton
-        mvpButton.apply {
+        binding.mvpButton.setOnClickListener {
             findNavController().navigate(R.id.nav_to_MVPFragment)
         }
-        mvvmButton.apply {
+        binding.mvvmButton.setOnClickListener {
             findNavController().navigate(R.id.nav_to_MVVMFragment)
         }
     }
