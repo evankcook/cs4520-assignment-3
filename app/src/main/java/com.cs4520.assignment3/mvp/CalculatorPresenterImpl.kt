@@ -1,7 +1,9 @@
 package com.cs4520.assignment3.mvp
 
-class CalculatorPresenterImpl(private var view : CalculatorMVP.CalculatorView?, private var model :
-CalculatorMVP.CalculatorModel) : CalculatorMVP.CalculatorPresenter {
+import com.cs4520.assignment3.CalculatorModel
+
+class CalculatorPresenterImpl(private var view : CalculatorView?, private var model :
+CalculatorModel) : CalculatorPresenter {
 
 
     override fun onAddButtonClick(val1: Double?, val2: Double?) {

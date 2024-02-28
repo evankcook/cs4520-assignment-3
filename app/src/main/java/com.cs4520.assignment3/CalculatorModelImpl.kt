@@ -1,6 +1,6 @@
-package com.cs4520.assignment3.mvp
+package com.cs4520.assignment3
 
-class CalculatorModelImpl : CalculatorMVP.CalculatorModel {
+class CalculatorModelImpl : CalculatorModel {
     override fun add(val1 : Double, val2 : Double) : Double {
         return val1 + val2
     }

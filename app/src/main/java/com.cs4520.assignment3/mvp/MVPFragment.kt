@@ -7,13 +7,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import com.cs4520.assignment3.CalculatorModelImpl
 import com.cs4520.assignment3.databinding.MvpFragmentBinding
 
-class MVPFragment : Fragment(), CalculatorMVP.CalculatorView {
+class MVPFragment : Fragment(), CalculatorView {
     private var _binding: MvpFragmentBinding? = null
     private val binding get() = _binding!!
 
-    private var presenter: CalculatorMVP.CalculatorPresenter? = null
+    private var presenter: CalculatorPresenter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,6 +64,7 @@ class MVPFragment : Fragment(), CalculatorMVP.CalculatorView {
 
     override fun showError(error : String) {
         Toast.makeText(context, error, Toast.LENGTH_SHORT).show()
+        binding.result.visibility = View.GONE
     }
 
     private fun clearAllInputs() {
