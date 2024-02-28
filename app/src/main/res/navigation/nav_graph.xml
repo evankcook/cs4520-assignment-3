@@ -21,7 +21,7 @@
         android:label="MVP Architecture" />
     <fragment
         android:id="@+id/MVVMFragment"
-        android:name="com.cs4520.assignment3.MVVMFragment"
+        android:name="com.cs4520.assignment3.mvvm.MVVMFragment"
         android:label="MVVM Architecture" />
 
 </navigation>
